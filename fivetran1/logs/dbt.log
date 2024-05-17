@@ -1,0 +1,1488 @@
+[0m00:11:44.770955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022806EEA810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022806FDC3E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022806FDFC20>]}
+
+
+============================== 00:11:44.778976 | 5b6b0004-b0e6-4b2c-a940-0aea7885b901 ==============================
+[0m00:11:44.778976 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:11:44.789060 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:11:44.794661 [info ] [MainThread]: dbt version: 1.7.13
+[0m00:11:44.796266 [info ] [MainThread]: python version: 3.12.3
+[0m00:11:44.796266 [info ] [MainThread]: python path: C:\Users\Varun\Desktop\DBT\dbt-env\Scripts\python.exe
+[0m00:11:44.796266 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m00:11:46.784740 [info ] [MainThread]: Using profiles dir at C:\Users\Varun\.dbt
+[0m00:11:46.784740 [info ] [MainThread]: Using profiles.yml file at C:\Users\Varun\.dbt\profiles.yml
+[0m00:11:46.792762 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Varun\Desktop\dbt-Project\fivetran1\dbt_project.yml
+[0m00:11:46.792762 [info ] [MainThread]: adapter type: snowflake
+[0m00:11:46.792762 [info ] [MainThread]: adapter version: 1.7.3
+[0m00:11:46.964198 [info ] [MainThread]: Configuration:
+[0m00:11:46.964198 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:11:46.972208 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:11:46.972208 [info ] [MainThread]: Required dependencies:
+[0m00:11:46.972208 [debug] [MainThread]: Executing "git --help"
+[0m00:11:47.130555 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:11:47.130555 [debug] [MainThread]: STDERR: "b''"
+[0m00:11:47.130555 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:11:47.136800 [info ] [MainThread]: Connection:
+[0m00:11:47.139322 [info ] [MainThread]:   account: skxrlhy-sj51472
+[0m00:11:47.139322 [info ] [MainThread]:   user: VARUNSERVSOFT
+[0m00:11:47.144841 [info ] [MainThread]:   database: PC_FIVETRAN_DB
+[0m00:11:47.146522 [info ] [MainThread]:   warehouse: FIVETRAN1
+[0m00:11:47.146522 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m00:11:47.146522 [info ] [MainThread]:   schema: GOOGLE_SHEETS_DEMO
+[0m00:11:47.146522 [info ] [MainThread]:   authenticator: None
+[0m00:11:47.153039 [info ] [MainThread]:   oauth_client_id: None
+[0m00:11:47.153039 [info ] [MainThread]:   query_tag: None
+[0m00:11:47.153039 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:11:47.153039 [info ] [MainThread]:   host: None
+[0m00:11:47.153039 [info ] [MainThread]:   port: None
+[0m00:11:47.153039 [info ] [MainThread]:   proxy_host: None
+[0m00:11:47.153039 [info ] [MainThread]:   proxy_port: None
+[0m00:11:47.161064 [info ] [MainThread]:   protocol: None
+[0m00:11:47.161064 [info ] [MainThread]:   connect_retries: 1
+[0m00:11:47.165211 [info ] [MainThread]:   connect_timeout: None
+[0m00:11:47.165211 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:11:47.165211 [info ] [MainThread]:   retry_all: False
+[0m00:11:47.169230 [info ] [MainThread]:   insecure_mode: False
+[0m00:11:47.169230 [info ] [MainThread]:   reuse_connections: None
+[0m00:11:47.169230 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:11:47.169230 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:11:47.169230 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:11:47.180608 [debug] [MainThread]: On debug: select 1 as id
+[0m00:11:47.180608 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:11:48.829630 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m00:11:48.829630 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m00:11:48.837655 [debug] [MainThread]: On debug: No close available on handle
+[0m00:11:48.837655 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:11:48.843440 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:11:48.849985 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB: skxrlhy-sj51472.snowflakecomputing.com:443. Incorrect username or password was specified.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:11:48.854196 [debug] [MainThread]: Command `dbt debug` failed at 00:11:48.854196 after 4.44 seconds
+[0m00:11:48.854196 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:11:48.854196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002281F545640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022806EEA810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022807007AD0>]}
+[0m00:11:48.854196 [debug] [MainThread]: Flushing usage events
+[0m00:12:36.001531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BE39DCAA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BE39DCA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BE39DC8C0>]}
+
+
+============================== 00:12:36.016262 | 61c541f2-d0b9-4561-9303-0f58a62cfcfb ==============================
+[0m00:12:36.016262 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:12:36.024274 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:12:36.024274 [info ] [MainThread]: dbt version: 1.7.13
+[0m00:12:36.024274 [info ] [MainThread]: python version: 3.12.3
+[0m00:12:36.032250 [info ] [MainThread]: python path: C:\Users\Varun\Desktop\DBT\dbt-env\Scripts\python.exe
+[0m00:12:36.032250 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m00:12:37.947422 [info ] [MainThread]: Using profiles dir at C:\Users\Varun\.dbt
+[0m00:12:37.947422 [info ] [MainThread]: Using profiles.yml file at C:\Users\Varun\.dbt\profiles.yml
+[0m00:12:37.954041 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Varun\Desktop\dbt-Project\fivetran1\dbt_project.yml
+[0m00:12:37.955500 [info ] [MainThread]: adapter type: snowflake
+[0m00:12:37.955500 [info ] [MainThread]: adapter version: 1.7.3
+[0m00:12:38.143342 [info ] [MainThread]: Configuration:
+[0m00:12:38.145957 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:12:38.145957 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:12:38.151068 [info ] [MainThread]: Required dependencies:
+[0m00:12:38.151068 [debug] [MainThread]: Executing "git --help"
+[0m00:12:38.308287 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:12:38.308287 [debug] [MainThread]: STDERR: "b''"
+[0m00:12:38.308287 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:12:38.308287 [info ] [MainThread]: Connection:
+[0m00:12:38.316145 [info ] [MainThread]:   account: skxrlhy-sj51472
+[0m00:12:38.316145 [info ] [MainThread]:   user: VARUNSERVSOFT
+[0m00:12:38.316145 [info ] [MainThread]:   database: PC_FIVETRAN_DB
+[0m00:12:38.316145 [info ] [MainThread]:   warehouse: FIVETRAN1
+[0m00:12:38.323963 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m00:12:38.324289 [info ] [MainThread]:   schema: GOOGLE_SHEETS_DEMO
+[0m00:12:38.324289 [info ] [MainThread]:   authenticator: None
+[0m00:12:38.324289 [info ] [MainThread]:   oauth_client_id: None
+[0m00:12:38.324289 [info ] [MainThread]:   query_tag: None
+[0m00:12:38.324289 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:12:38.331893 [info ] [MainThread]:   host: None
+[0m00:12:38.331893 [info ] [MainThread]:   port: None
+[0m00:12:38.331893 [info ] [MainThread]:   proxy_host: None
+[0m00:12:38.331893 [info ] [MainThread]:   proxy_port: None
+[0m00:12:38.331893 [info ] [MainThread]:   protocol: None
+[0m00:12:38.331893 [info ] [MainThread]:   connect_retries: 1
+[0m00:12:38.340575 [info ] [MainThread]:   connect_timeout: None
+[0m00:12:38.340575 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:12:38.340575 [info ] [MainThread]:   retry_all: False
+[0m00:12:38.346689 [info ] [MainThread]:   insecure_mode: False
+[0m00:12:38.346689 [info ] [MainThread]:   reuse_connections: None
+[0m00:12:38.349503 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:12:38.349503 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:12:38.349503 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:12:38.349503 [debug] [MainThread]: On debug: select 1 as id
+[0m00:12:38.349503 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:12:40.037934 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m00:12:40.037934 [debug] [MainThread]: On debug: Close
+[0m00:12:40.363044 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:12:40.363044 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:12:40.378696 [debug] [MainThread]: Command `dbt debug` succeeded at 00:12:40.378696 after 4.62 seconds
+[0m00:12:40.378696 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:12:40.378696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BE3864620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BFC801EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BFBEBDA30>]}
+[0m00:12:40.378696 [debug] [MainThread]: Flushing usage events
+[0m00:13:10.728356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E996EBCA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E996EBC830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E996EBC5C0>]}
+
+
+============================== 00:13:10.739142 | 4787aee4-8038-432a-918b-308ae1ec2884 ==============================
+[0m00:13:10.739142 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:13:10.739142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:13:12.880399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AF75B1A0>]}
+[0m00:13:13.077872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AFB9A240>]}
+[0m00:13:13.077872 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:13:13.101463 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:13:13.101463 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m00:13:13.109870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AFD7B3B0>]}
+[0m00:13:15.525831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AFFB20F0>]}
+[0m00:13:15.551469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9B00FDB20>]}
+[0m00:13:15.551469 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m00:13:15.551469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AFDDEED0>]}
+[0m00:13:15.558496 [info ] [MainThread]: 
+[0m00:13:15.564034 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:13:15.566563 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m00:13:15.612294 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m00:13:15.615532 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m00:13:15.615532 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:13:17.119955 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 2.0 seconds
+[0m00:13:17.119955 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m00:13:17.711547 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m00:13:17.734662 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m00:13:17.734662 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m00:13:17.734662 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:13:19.344001 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m00:13:19.344001 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m00:13:19.683954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9B0161100>]}
+[0m00:13:19.687974 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m00:13:19.687974 [info ] [MainThread]: 
+[0m00:13:19.700461 [debug] [Thread-1 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m00:13:19.705074 [info ] [Thread-1 (]: 1 of 2 START sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ............. [RUN]
+[0m00:13:19.705592 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m00:13:19.705592 [debug] [Thread-1 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m00:13:19.729909 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m00:13:19.732750 [debug] [Thread-1 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 00:13:19.705592 => 00:13:19.732750
+[0m00:13:19.732750 [debug] [Thread-1 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m00:13:19.927369 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.my_first_dbt_model"
+[0m00:13:19.927369 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.my_first_dbt_model"
+[0m00:13:19.935645 [debug] [Thread-1 (]: On model.fivetran1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_first_dbt_model"} */
+create or replace transient table PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m00:13:19.935645 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:13:21.602662 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b3dde3-0000-a042-0006-f56e0001152a
+[0m00:13:21.602662 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000606 (57P03): No active warehouse selected in the current session.  Select an active warehouse with the 'use warehouse' command.
+
+[0m00:13:21.610711 [debug] [Thread-1 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 00:13:19.732750 => 00:13:21.610711
+[0m00:13:21.610711 [debug] [Thread-1 (]: On model.fivetran1.my_first_dbt_model: Close
+[0m00:13:22.027149 [debug] [Thread-1 (]: Database Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  000606 (57P03): No active warehouse selected in the current session.  Select an active warehouse with the 'use warehouse' command.
+  
+  compiled Code at target\run\fivetran1\models\example\my_first_dbt_model.sql
+[0m00:13:22.027149 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4787aee4-8038-432a-918b-308ae1ec2884', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9B13F3DD0>]}
+[0m00:13:22.027149 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model .... [[31mERROR[0m in 2.32s]
+[0m00:13:22.027149 [debug] [Thread-1 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m00:13:22.038985 [debug] [Thread-3 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m00:13:22.038985 [info ] [Thread-3 (]: 2 of 2 SKIP relation GOOGLE_SHEETS_DEMO.my_second_dbt_model .................... [[33mSKIP[0m]
+[0m00:13:22.045245 [debug] [Thread-3 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m00:13:22.045245 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:13:22.045245 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m00:13:22.051767 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m00:13:22.051767 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m00:13:22.051767 [info ] [MainThread]: 
+[0m00:13:22.051767 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 6.49 seconds (6.49s).
+[0m00:13:22.051767 [debug] [MainThread]: Command end result
+[0m00:13:22.076035 [info ] [MainThread]: 
+[0m00:13:22.081524 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m00:13:22.084549 [info ] [MainThread]: 
+[0m00:13:22.084549 [error] [MainThread]:   Database Error in model my_first_dbt_model (models\example\my_first_dbt_model.sql)
+  000606 (57P03): No active warehouse selected in the current session.  Select an active warehouse with the 'use warehouse' command.
+  
+  compiled Code at target\run\fivetran1\models\example\my_first_dbt_model.sql
+[0m00:13:22.084549 [info ] [MainThread]: 
+[0m00:13:22.084549 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m00:13:22.095737 [debug] [MainThread]: Command `dbt run` failed at 00:13:22.092574 after 11.60 seconds
+[0m00:13:22.096751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9961ED6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AF839310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9AFD3CB90>]}
+[0m00:13:22.096751 [debug] [MainThread]: Flushing usage events
+[0m00:19:28.223685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001426616C590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001425FC08A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001426616DB20>]}
+
+
+============================== 00:19:28.240078 | 06d5d794-08b0-450b-9fdb-55a1e6b0dfe2 ==============================
+[0m00:19:28.240078 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:19:28.240078 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:19:30.450165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427E4A6FF0>]}
+[0m00:19:30.683085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427EFBF770>]}
+[0m00:19:30.683085 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:19:30.699229 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:19:30.899427 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:19:30.899427 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:19:30.904453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427F0CD850>]}
+[0m00:19:30.936244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427F213230>]}
+[0m00:19:30.936244 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m00:19:30.936244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427EE74B30>]}
+[0m00:19:30.951896 [info ] [MainThread]: 
+[0m00:19:30.951896 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:19:30.967522 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m00:19:31.078497 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m00:19:31.078497 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m00:19:31.078497 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:19:32.921829 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 2.0 seconds
+[0m00:19:32.921829 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m00:19:33.193536 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m00:19:33.205164 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m00:19:33.219705 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m00:19:33.219705 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:19:34.542133 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m00:19:34.557714 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m00:19:34.746399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427EA0B4D0>]}
+[0m00:19:34.746399 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m00:19:34.761878 [info ] [MainThread]: 
+[0m00:19:34.761878 [debug] [Thread-1 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m00:19:34.777494 [info ] [Thread-1 (]: 1 of 2 START sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ............. [RUN]
+[0m00:19:34.777494 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m00:19:34.777494 [debug] [Thread-1 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m00:19:34.808935 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m00:19:34.808935 [debug] [Thread-1 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 00:19:34.777494 => 00:19:34.808935
+[0m00:19:34.808935 [debug] [Thread-1 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m00:19:34.887273 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.my_first_dbt_model"
+[0m00:19:34.887273 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.my_first_dbt_model"
+[0m00:19:34.887273 [debug] [Thread-1 (]: On model.fivetran1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_first_dbt_model"} */
+create or replace transient table PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m00:19:34.887273 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:19:37.190515 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m00:19:37.253798 [debug] [Thread-1 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 00:19:34.808935 => 00:19:37.253798
+[0m00:19:37.253798 [debug] [Thread-1 (]: On model.fivetran1.my_first_dbt_model: Close
+[0m00:19:37.505478 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427F43ABA0>]}
+[0m00:19:37.512498 [info ] [Thread-1 (]: 1 of 2 OK created sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ........ [[32mSUCCESS 1[0m in 2.73s]
+[0m00:19:37.512498 [debug] [Thread-1 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m00:19:37.512498 [debug] [Thread-3 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m00:19:37.521519 [info ] [Thread-3 (]: 2 of 2 START sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ............. [RUN]
+[0m00:19:37.521519 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m00:19:37.521519 [debug] [Thread-3 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m00:19:37.539580 [debug] [Thread-3 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m00:19:37.539580 [debug] [Thread-3 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 00:19:37.521519 => 00:19:37.539580
+[0m00:19:37.539580 [debug] [Thread-3 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m00:19:37.612531 [debug] [Thread-3 (]: Writing runtime sql for node "model.fivetran1.my_second_dbt_model"
+[0m00:19:37.616047 [debug] [Thread-3 (]: Using snowflake connection "model.fivetran1.my_second_dbt_model"
+[0m00:19:37.616047 [debug] [Thread-3 (]: On model.fivetran1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_second_dbt_model"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+where id = 1
+  );
+[0m00:19:37.616047 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:19:39.554356 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m00:19:39.554356 [debug] [Thread-3 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 00:19:37.547124 => 00:19:39.554356
+[0m00:19:39.554356 [debug] [Thread-3 (]: On model.fivetran1.my_second_dbt_model: Close
+[0m00:19:39.774374 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06d5d794-08b0-450b-9fdb-55a1e6b0dfe2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001427F551DC0>]}
+[0m00:19:39.774374 [info ] [Thread-3 (]: 2 of 2 OK created sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ........ [[32mSUCCESS 1[0m in 2.25s]
+[0m00:19:39.774374 [debug] [Thread-3 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m00:19:39.790884 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:19:39.790884 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m00:19:39.790884 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m00:19:39.790884 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m00:19:39.790884 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m00:19:39.790884 [info ] [MainThread]: 
+[0m00:19:39.790884 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 8.84 seconds (8.84s).
+[0m00:19:39.790884 [debug] [MainThread]: Command end result
+[0m00:19:39.821820 [info ] [MainThread]: 
+[0m00:19:39.821820 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:19:39.837475 [info ] [MainThread]: 
+[0m00:19:39.837475 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m00:19:39.837475 [debug] [MainThread]: Command `dbt run` succeeded at 00:19:39.837475 after 11.88 seconds
+[0m00:19:39.837475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014265FA7980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014265D72FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001425FC08A10>]}
+[0m00:19:39.850683 [debug] [MainThread]: Flushing usage events
+[0m00:31:04.646550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C10EF6E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C10EF080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C10EFFB0>]}
+
+
+============================== 00:31:04.646550 | a388b15a-ad18-47fb-9413-1bc3f50f1b6d ==============================
+[0m00:31:04.646550 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:31:04.646550 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:31:05.308772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a388b15a-ad18-47fb-9413-1bc3f50f1b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D9F4AE10>]}
+[0m00:31:05.356237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a388b15a-ad18-47fb-9413-1bc3f50f1b6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C01936B0>]}
+[0m00:31:05.356237 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:31:05.356237 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:31:05.371870 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading fivetran1: demo\schema.yml - Runtime Error
+    Syntax error near line 6
+    ------------------------------
+    3  | Source:
+    4  |   - name: fivetran
+    5  |     description: servsoft
+    6  |   database: PC_FIVETRAN_DB
+    7  |   Schema: GOOGLE_SHEETS_DEMO
+    8  |   Tables: 
+    9  |   - NAME: ORDERS
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block collection
+      in "<unicode string>", line 4, column 3
+    did not find expected '-' indicator
+      in "<unicode string>", line 6, column 3
+[0m00:31:05.371870 [debug] [MainThread]: Command `dbt run` failed at 00:31:05.371870 after 0.84 seconds
+[0m00:31:05.371870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C1045220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6D97DC470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6C10EC740>]}
+[0m00:31:05.371870 [debug] [MainThread]: Flushing usage events
+[0m00:34:26.543824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011ADD10D0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011ADD10FE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011ADD10F770>]}
+
+
+============================== 00:34:26.552470 | 992655d9-3961-4a65-bf5f-735a8ba3e94b ==============================
+[0m00:34:26.552470 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:34:26.552470 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m00:34:27.233933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '992655d9-3961-4a65-bf5f-735a8ba3e94b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011AF607F590>]}
+[0m00:34:27.296532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '992655d9-3961-4a65-bf5f-735a8ba3e94b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011AF59552B0>]}
+[0m00:34:27.296532 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:34:27.296532 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:34:27.312172 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading fivetran1: demo\schema.yml - Runtime Error
+    Syntax error near line 6
+    ------------------------------
+    3  | Source:
+    4  |   - name: fivetran
+    5  |     description: servsoft
+    6  |   database: PC_FIVETRAN_DB
+    7  |   Schema: GOOGLE_SHEETS_DEMO
+    8  |   Tables: 
+    9  |   - NAME: ORDERS
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block collection
+      in "<unicode string>", line 4, column 3
+    did not find expected '-' indicator
+      in "<unicode string>", line 6, column 3
+[0m00:34:27.312172 [debug] [MainThread]: Command `dbt run` failed at 00:34:27.312172 after 0.87 seconds
+[0m00:34:27.312172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011ADCEF5A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011AF55FA420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011AF5F96B10>]}
+[0m00:34:27.312172 [debug] [MainThread]: Flushing usage events
+[0m00:34:58.527536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F61FF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F61D340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F61F410>]}
+
+
+============================== 00:34:58.530636 | 23dc5a39-5837-45fb-8311-f71e7caf4afb ==============================
+[0m00:34:58.530636 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:34:58.531537 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:34:59.149760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F52AAB0>]}
+[0m00:34:59.204847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9383063F0>]}
+[0m00:34:59.205950 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:34:59.212569 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:34:59.259657 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m00:34:59.260659 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\schema.yml
+[0m00:34:59.260659 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\customer.sql
+[0m00:34:59.349296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F4D1EB0>]}
+[0m00:34:59.355239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E938710170>]}
+[0m00:34:59.356244 [info ] [MainThread]: Found 3 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m00:34:59.356244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9387EA8A0>]}
+[0m00:34:59.357244 [info ] [MainThread]: 
+[0m00:34:59.358345 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:34:59.360300 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m00:34:59.368551 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m00:34:59.369543 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m00:34:59.369543 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:35:01.136201 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 2.0 seconds
+[0m00:35:01.139210 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m00:35:01.336264 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m00:35:01.349941 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m00:35:01.350846 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m00:35:01.350846 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:35:02.107882 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m00:35:02.110870 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m00:35:02.297049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E938712450>]}
+[0m00:35:02.299593 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m00:35:02.300591 [info ] [MainThread]: 
+[0m00:35:02.325441 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m00:35:02.325441 [debug] [Thread-2 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m00:35:02.327691 [info ] [Thread-1 (]: 1 of 3 START sql view model GOOGLE_SHEETS_DEMO.customer ........................ [RUN]
+[0m00:35:02.329280 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m00:35:02.329797 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m00:35:02.335537 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m00:35:02.328265 [info ] [Thread-2 (]: 2 of 3 START sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ............. [RUN]
+[0m00:35:02.337538 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m00:35:02.337538 [debug] [Thread-2 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m00:35:02.337538 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 00:35:02.329797 => 00:35:02.337538
+[0m00:35:02.339912 [debug] [Thread-2 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m00:35:02.344046 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m00:35:02.362776 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.customer"
+[0m00:35:02.362776 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 00:35:02.338906 => 00:35:02.362776
+[0m00:35:02.363954 [debug] [Thread-2 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m00:35:02.377045 [debug] [Thread-2 (]: Writing runtime sql for node "model.fivetran1.my_first_dbt_model"
+[0m00:35:02.377045 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.customer"
+[0m00:35:02.378045 [debug] [Thread-1 (]: On model.fivetran1.customer: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.customer"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.customer
+  
+   as (
+    with cte as (select ROW_ID  from (source('PC_FIVETRAN_DB','ORDERS'))
+)
+select * from FINAL
+  );
+[0m00:35:02.379045 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:35:02.379045 [debug] [Thread-2 (]: Using snowflake connection "model.fivetran1.my_first_dbt_model"
+[0m00:35:02.381046 [debug] [Thread-2 (]: On model.fivetran1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_first_dbt_model"} */
+create or replace transient table PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m00:35:02.381046 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:35:03.103476 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b3ddf9-0000-a042-0006-f56e000115e2
+[0m00:35:03.103476 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 4 at position 38 unexpected 'source'.
+syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+syntax error line 5 at position 0 unexpected ')'.
+[0m00:35:03.113488 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 00:35:02.345062 => 00:35:03.113488
+[0m00:35:03.113488 [debug] [Thread-1 (]: On model.fivetran1.customer: Close
+[0m00:35:03.281904 [debug] [Thread-1 (]: Database Error in model customer (models\demo\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\demo\customer.sql
+[0m00:35:03.282905 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9388DEF30>]}
+[0m00:35:03.283906 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model GOOGLE_SHEETS_DEMO.customer ............... [[31mERROR[0m in 0.95s]
+[0m00:35:03.287043 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m00:35:04.185730 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m00:35:04.211343 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 00:35:02.363954 => 00:35:04.211343
+[0m00:35:04.212346 [debug] [Thread-2 (]: On model.fivetran1.my_first_dbt_model: Close
+[0m00:35:04.397282 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9389E07A0>]}
+[0m00:35:04.398282 [info ] [Thread-2 (]: 2 of 3 OK created sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ........ [[32mSUCCESS 1[0m in 2.06s]
+[0m00:35:04.401302 [debug] [Thread-2 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m00:35:04.404299 [debug] [Thread-4 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m00:35:04.405298 [info ] [Thread-4 (]: 3 of 3 START sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ............. [RUN]
+[0m00:35:04.406297 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m00:35:04.407298 [debug] [Thread-4 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m00:35:04.409297 [debug] [Thread-4 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m00:35:04.410297 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 00:35:04.407298 => 00:35:04.409297
+[0m00:35:04.410297 [debug] [Thread-4 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m00:35:04.412415 [debug] [Thread-4 (]: Writing runtime sql for node "model.fivetran1.my_second_dbt_model"
+[0m00:35:04.413522 [debug] [Thread-4 (]: Using snowflake connection "model.fivetran1.my_second_dbt_model"
+[0m00:35:04.414422 [debug] [Thread-4 (]: On model.fivetran1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_second_dbt_model"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+where id = 1
+  );
+[0m00:35:04.415084 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m00:35:05.231421 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m00:35:05.236787 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 00:35:04.410297 => 00:35:05.235783
+[0m00:35:05.237688 [debug] [Thread-4 (]: On model.fivetran1.my_second_dbt_model: Close
+[0m00:35:05.418542 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23dc5a39-5837-45fb-8311-f71e7caf4afb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E939AE83B0>]}
+[0m00:35:05.419542 [info ] [Thread-4 (]: 3 of 3 OK created sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ........ [[32mSUCCESS 1[0m in 1.01s]
+[0m00:35:05.423174 [debug] [Thread-4 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m00:35:05.429173 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:35:05.430174 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m00:35:05.431172 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m00:35:05.431172 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m00:35:05.432190 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m00:35:05.432190 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m00:35:05.433182 [info ] [MainThread]: 
+[0m00:35:05.433182 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 6.07 seconds (6.07s).
+[0m00:35:05.434190 [debug] [MainThread]: Command end result
+[0m00:35:05.440188 [info ] [MainThread]: 
+[0m00:35:05.441275 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m00:35:05.441275 [info ] [MainThread]: 
+[0m00:35:05.442171 [error] [MainThread]:   Database Error in model customer (models\demo\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\demo\customer.sql
+[0m00:35:05.443178 [info ] [MainThread]: 
+[0m00:35:05.443178 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m00:35:05.444390 [debug] [MainThread]: Command `dbt run` failed at 00:35:05.444390 after 7.01 seconds
+[0m00:35:05.445002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F022FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F33D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91F27D460>]}
+[0m00:35:05.445002 [debug] [MainThread]: Flushing usage events
+[0m00:37:40.661917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA3E03F8C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA3E03FF20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA3E03C4A0>]}
+
+
+============================== 00:37:40.669643 | 9ff8341b-767e-4cdd-aefc-2ed51f51a114 ==============================
+[0m00:37:40.669643 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:37:40.671527 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:37:41.434681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA56F6C680>]}
+[0m00:37:41.489253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA55CFB8C0>]}
+[0m00:37:41.490245 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:37:41.496879 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:37:41.541876 [debug] [MainThread]: Partial parsing enabled: 4 files deleted, 1 files added, 1 files changed.
+[0m00:37:41.542878 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\example\customer.sql
+[0m00:37:41.542878 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\example\schema.yml
+[0m00:37:41.542878 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\demo\customer.sql
+[0m00:37:41.543878 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\my_first_dbt_model.sql
+[0m00:37:41.544218 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\my_second_dbt_model.sql
+[0m00:37:41.634989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA572784D0>]}
+[0m00:37:41.640992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA570EB920>]}
+[0m00:37:41.640992 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m00:37:41.661933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA55EC5C10>]}
+[0m00:37:41.662772 [info ] [MainThread]: 
+[0m00:37:41.664476 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:37:41.666525 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m00:37:41.676128 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m00:37:41.677133 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m00:37:41.677133 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:37:43.022806 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.0 seconds
+[0m00:37:43.027244 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m00:37:43.195277 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m00:37:43.202277 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m00:37:43.203277 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m00:37:43.204615 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:37:43.970974 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m00:37:43.974070 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m00:37:44.151784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA570E3C80>]}
+[0m00:37:44.152783 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m00:37:44.153782 [info ] [MainThread]: 
+[0m00:37:44.165126 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m00:37:44.166132 [info ] [Thread-1 (]: 1 of 1 START sql view model GOOGLE_SHEETS_DEMO.customer ........................ [RUN]
+[0m00:37:44.168132 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m00:37:44.168132 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m00:37:44.174607 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m00:37:44.176510 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 00:37:44.168132 => 00:37:44.175613
+[0m00:37:44.176510 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m00:37:44.201858 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.customer"
+[0m00:37:44.204177 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.customer"
+[0m00:37:44.205176 [debug] [Thread-1 (]: On model.fivetran1.customer: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.customer"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.customer
+  
+   as (
+    with cte as (select ROW_ID  from (source('PC_FIVETRAN_DB','ORDERS'))
+)
+select * from FINAL
+  );
+[0m00:37:44.205176 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:37:44.979211 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b3ddfb-0000-a042-0006-f56e000115ea
+[0m00:37:44.980211 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 4 at position 38 unexpected 'source'.
+syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+syntax error line 5 at position 0 unexpected ')'.
+[0m00:37:44.981211 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 00:37:44.177620 => 00:37:44.980211
+[0m00:37:44.982312 [debug] [Thread-1 (]: On model.fivetran1.customer: Close
+[0m00:37:45.196840 [debug] [Thread-1 (]: Database Error in model customer (models\example\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\example\customer.sql
+[0m00:37:45.197841 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9ff8341b-767e-4cdd-aefc-2ed51f51a114', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA56D24680>]}
+[0m00:37:45.198841 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model GOOGLE_SHEETS_DEMO.customer ............... [[31mERROR[0m in 1.03s]
+[0m00:37:45.233984 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m00:37:45.237985 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:37:45.237985 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m00:37:45.238986 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m00:37:45.238986 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m00:37:45.239983 [info ] [MainThread]: 
+[0m00:37:45.240981 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.58 seconds (3.58s).
+[0m00:37:45.241982 [debug] [MainThread]: Command end result
+[0m00:37:45.252014 [info ] [MainThread]: 
+[0m00:37:45.253015 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m00:37:45.255016 [info ] [MainThread]: 
+[0m00:37:45.256018 [error] [MainThread]:   Database Error in model customer (models\example\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''PC_FIVETRAN_DB''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\example\customer.sql
+[0m00:37:45.257015 [info ] [MainThread]: 
+[0m00:37:45.257015 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m00:37:45.258015 [debug] [MainThread]: Command `dbt run` failed at 00:37:45.258015 after 4.74 seconds
+[0m00:37:45.259016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA3DF76390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA56FB26C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA572786B0>]}
+[0m00:37:45.259016 [debug] [MainThread]: Flushing usage events
+[0m00:39:39.319271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBCA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBE810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBF740>]}
+
+
+============================== 00:39:39.334795 | db5f2719-1ab4-48f3-94b4-6cd96f98d4de ==============================
+[0m00:39:39.334795 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:39:39.334795 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:39:40.355407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E711AB8890>]}
+[0m00:39:40.418291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7785DCFB0>]}
+[0m00:39:40.418291 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:39:40.418291 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:39:40.480799 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:39:40.480799 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\example\customer.sql
+[0m00:39:40.590606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E711B19EB0>]}
+[0m00:39:40.606636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E711CA2CF0>]}
+[0m00:39:40.606636 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m00:39:40.606636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E77F655FD0>]}
+[0m00:39:40.606636 [info ] [MainThread]: 
+[0m00:39:40.606636 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:39:40.606636 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m00:39:40.622284 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m00:39:40.622284 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m00:39:40.622284 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:39:41.565385 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.0 seconds
+[0m00:39:41.580937 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m00:39:42.115383 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m00:39:42.131158 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m00:39:42.131158 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m00:39:42.146768 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:39:42.900992 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m00:39:42.900992 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m00:39:43.120903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E711CAAA80>]}
+[0m00:39:43.120903 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m00:39:43.120903 [info ] [MainThread]: 
+[0m00:39:43.136692 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m00:39:43.136692 [info ] [Thread-1 (]: 1 of 1 START sql view model GOOGLE_SHEETS_DEMO.customer ........................ [RUN]
+[0m00:39:43.136692 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m00:39:43.136692 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m00:39:43.152295 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m00:39:43.152295 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 00:39:43.136692 => 00:39:43.152295
+[0m00:39:43.152295 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m00:39:43.167918 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.customer"
+[0m00:39:43.167918 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.customer"
+[0m00:39:43.167918 [debug] [Thread-1 (]: On model.fivetran1.customer: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.customer"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.customer
+  
+   as (
+    with cte as (select ROW_ID  from (source('GOOGLE_SHEETS_DEMO','ORDERS'))
+)
+select * from FINAL
+  );
+[0m00:39:43.167918 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:39:43.890094 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b3ddfd-0000-a042-0006-f56e000115ee
+[0m00:39:43.890094 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 4 at position 38 unexpected 'source'.
+syntax error line 4 at position 45 unexpected ''GOOGLE_SHEETS_DEMO''.
+syntax error line 5 at position 0 unexpected ')'.
+[0m00:39:43.890094 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 00:39:43.152295 => 00:39:43.890094
+[0m00:39:43.890094 [debug] [Thread-1 (]: On model.fivetran1.customer: Close
+[0m00:39:44.113870 [debug] [Thread-1 (]: Database Error in model customer (models\example\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''GOOGLE_SHEETS_DEMO''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\example\customer.sql
+[0m00:39:44.113870 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'db5f2719-1ab4-48f3-94b4-6cd96f98d4de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E712FD5070>]}
+[0m00:39:44.113870 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model GOOGLE_SHEETS_DEMO.customer ............... [[31mERROR[0m in 0.98s]
+[0m00:39:44.125512 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m00:39:44.125512 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:39:44.125512 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m00:39:44.125512 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m00:39:44.125512 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m00:39:44.125512 [info ] [MainThread]: 
+[0m00:39:44.125512 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.52 seconds (3.52s).
+[0m00:39:44.125512 [debug] [MainThread]: Command end result
+[0m00:39:44.141208 [info ] [MainThread]: 
+[0m00:39:44.141208 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m00:39:44.141208 [info ] [MainThread]: 
+[0m00:39:44.141208 [error] [MainThread]:   Database Error in model customer (models\example\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 4 at position 38 unexpected 'source'.
+  syntax error line 4 at position 45 unexpected ''GOOGLE_SHEETS_DEMO''.
+  syntax error line 5 at position 0 unexpected ')'.
+  compiled Code at target\run\fivetran1\models\example\customer.sql
+[0m00:39:44.141208 [info ] [MainThread]: 
+[0m00:39:44.141208 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m00:39:44.141208 [debug] [MainThread]: Command `dbt run` failed at 00:39:44.141208 after 5.00 seconds
+[0m00:39:44.141208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBE930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBCA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E778BBE810>]}
+[0m00:39:44.141208 [debug] [MainThread]: Flushing usage events
+[0m00:43:56.125963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206D136D760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206D136FD40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206D136F950>]}
+
+
+============================== 00:43:56.125963 | cfa66b28-c557-4fb2-9f52-45833c50af1d ==============================
+[0m00:43:56.125963 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:43:56.129969 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m00:43:56.742339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cfa66b28-c557-4fb2-9f52-45833c50af1d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206EA2DEC00>]}
+[0m00:43:56.805204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cfa66b28-c557-4fb2-9f52-45833c50af1d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206E9F650A0>]}
+[0m00:43:56.805204 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:43:56.820908 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:43:56.867791 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:43:56.867791 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\example\customer.sql
+[0m00:43:56.947204 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\example\customer.sql) depends on a source named 'ivetran.ORDERS' which was not found
+[0m00:43:56.947204 [debug] [MainThread]: Command `dbt run` failed at 00:43:56.947204 after 0.92 seconds
+[0m00:43:56.947204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206E9B94470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206E8122F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000206EA547FE0>]}
+[0m00:43:56.947204 [debug] [MainThread]: Flushing usage events
+[0m00:46:04.250312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1590800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1590620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB1590650>]}
+
+
+============================== 00:46:04.253588 | 7f5cb357-e61e-443d-b054-a7c0ee2ea0ec ==============================
+[0m00:46:04.253588 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:46:04.253588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:46:05.071241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f5cb357-e61e-443d-b054-a7c0ee2ea0ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAC9781A90>]}
+[0m00:46:05.138690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7f5cb357-e61e-443d-b054-a7c0ee2ea0ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACA50CB00>]}
+[0m00:46:05.139690 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:46:05.144798 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:46:05.210417 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:46:05.210417 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\example\customer.sql
+[0m00:46:05.314411 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\example\customer.sql) depends on a source named 'fivetran.ORDERS' which was not found
+[0m00:46:05.315356 [debug] [MainThread]: Command `dbt run` failed at 00:46:05.315356 after 1.18 seconds
+[0m00:46:05.316414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB13E9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAC83ABB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACA572FF0>]}
+[0m00:46:05.316414 [debug] [MainThread]: Flushing usage events
+[0m00:51:34.169040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ACFF2FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ACFF2360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ACFF35F0>]}
+
+
+============================== 00:51:34.169040 | 2938f991-7919-40c8-8b6a-708a6a5e9920 ==============================
+[0m00:51:34.169040 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:51:34.169040 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'log_path': 'C:\\Users\\Varun\\Desktop\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:51:35.047395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2938f991-7919-40c8-8b6a-708a6a5e9920', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4C5ABD0A0>]}
+[0m00:51:35.123416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2938f991-7919-40c8-8b6a-708a6a5e9920', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4C5293C80>]}
+[0m00:51:35.124418 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:51:35.124855 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:51:35.192337 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:51:35.192337 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\example\customer.sql
+[0m00:51:35.290129 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\example\customer.sql) depends on a source named 'GOOGLE_SHEETS_DEMO.ORDERS' which was not found
+[0m00:51:35.290129 [debug] [MainThread]: Command `dbt run` failed at 00:51:35.290129 after 1.22 seconds
+[0m00:51:35.290129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ACECA900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4C6251E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4C4D0BD70>]}
+[0m00:51:35.290129 [debug] [MainThread]: Flushing usage events
+[0m00:34:13.995442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002147871E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002147871F5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002147871FAA0>]}
+
+
+============================== 00:34:13.995442 | b6f3c408-f33f-451e-b264-90e3c3a3d4fa ==============================
+[0m00:34:13.995442 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:34:13.995442 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:34:13.995442 [info ] [MainThread]: dbt version: 1.7.13
+[0m00:34:13.995442 [info ] [MainThread]: python version: 3.12.3
+[0m00:34:13.995442 [info ] [MainThread]: python path: C:\Users\Varun\Desktop\DBT\dbt-env\Scripts\python.exe
+[0m00:34:13.995442 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m00:34:14.734968 [info ] [MainThread]: Using profiles dir at C:\Users\Varun\.dbt
+[0m00:34:14.734968 [info ] [MainThread]: Using profiles.yml file at C:\Users\Varun\.dbt\profiles.yml
+[0m00:34:14.734968 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Varun\Desktop\demo_repo\dbt-Project\fivetran1\dbt_project.yml
+[0m00:34:14.734968 [info ] [MainThread]: adapter type: snowflake
+[0m00:34:14.734968 [info ] [MainThread]: adapter version: 1.7.3
+[0m00:34:14.798051 [info ] [MainThread]: Configuration:
+[0m00:34:14.798051 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:34:14.798051 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:34:14.798051 [info ] [MainThread]: Required dependencies:
+[0m00:34:14.798051 [debug] [MainThread]: Executing "git --help"
+[0m00:34:14.853697 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:34:14.858938 [debug] [MainThread]: STDERR: "b''"
+[0m00:34:14.858938 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:34:14.858938 [info ] [MainThread]: Connection:
+[0m00:34:14.858938 [info ] [MainThread]:   account: skxrlhy-sj51472
+[0m00:34:14.861445 [info ] [MainThread]:   user: VARUNSERVSOFT
+[0m00:34:14.861445 [info ] [MainThread]:   database: PC_FIVETRAN_DB
+[0m00:34:14.861445 [info ] [MainThread]:   warehouse: FIVETRAN1
+[0m00:34:14.861445 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m00:34:14.861445 [info ] [MainThread]:   schema: GOOGLE_SHEETS_DEMO
+[0m00:34:14.861445 [info ] [MainThread]:   authenticator: None
+[0m00:34:14.861445 [info ] [MainThread]:   oauth_client_id: None
+[0m00:34:14.861445 [info ] [MainThread]:   query_tag: None
+[0m00:34:14.861445 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:34:14.861445 [info ] [MainThread]:   host: None
+[0m00:34:14.861445 [info ] [MainThread]:   port: None
+[0m00:34:14.861445 [info ] [MainThread]:   proxy_host: None
+[0m00:34:14.861445 [info ] [MainThread]:   proxy_port: None
+[0m00:34:14.861445 [info ] [MainThread]:   protocol: None
+[0m00:34:14.861445 [info ] [MainThread]:   connect_retries: 1
+[0m00:34:14.870248 [info ] [MainThread]:   connect_timeout: None
+[0m00:34:14.870248 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:34:14.870248 [info ] [MainThread]:   retry_all: False
+[0m00:34:14.872565 [info ] [MainThread]:   insecure_mode: False
+[0m00:34:14.872565 [info ] [MainThread]:   reuse_connections: None
+[0m00:34:14.872565 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:34:14.872565 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:34:14.872565 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:34:14.872565 [debug] [MainThread]: On debug: select 1 as id
+[0m00:34:14.872565 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:34:15.669291 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m00:34:15.669291 [debug] [MainThread]: On debug: Close
+[0m00:34:15.842509 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:34:15.842509 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:34:15.846864 [debug] [MainThread]: Command `dbt debug` succeeded at 00:34:15.846864 after 1.95 seconds
+[0m00:34:15.846864 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:34:15.846864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214782B0EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000214782B2F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002147857B470>]}
+[0m00:34:15.846864 [debug] [MainThread]: Flushing usage events
+[0m00:34:27.924510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE999F800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE999EEA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE999ECF0>]}
+
+
+============================== 00:34:27.924510 | 48de055e-74cf-4f56-b188-7920e463708f ==============================
+[0m00:34:27.924510 [info ] [MainThread]: Running with dbt=1.7.13
+[0m00:34:27.924510 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:34:28.682098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48de055e-74cf-4f56-b188-7920e463708f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE9A00BF0>]}
+[0m00:34:28.745536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48de055e-74cf-4f56-b188-7920e463708f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AD829C45C0>]}
+[0m00:34:28.745536 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m00:34:28.758734 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m00:34:28.822482 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 4 files added, 0 files changed.
+[0m00:34:28.822482 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\schema.yml
+[0m00:34:28.822482 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\example\my_second_dbt_model.sql
+[0m00:34:28.822482 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\customer.sql
+[0m00:34:28.837989 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\example\my_first_dbt_model.sql
+[0m00:34:28.837989 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\customer.sql
+[0m00:34:28.932740 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a source named 'GOOGLE_SHEETS_DEMO.ORDERS' which was not found
+[0m00:34:28.945746 [debug] [MainThread]: Command `dbt compile` failed at 00:34:28.945746 after 1.12 seconds
+[0m00:34:28.945746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE9879850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE99C4D40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ADE999D910>]}
+[0m00:34:28.945746 [debug] [MainThread]: Flushing usage events
+[0m11:02:22.902507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9510761B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A94AD08A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9511EDA00>]}
+
+
+============================== 11:02:22.902507 | 9c875b6e-d101-4bbe-bf78-821e7c81bceb ==============================
+[0m11:02:22.902507 [info ] [MainThread]: Running with dbt=1.7.13
+[0m11:02:22.902507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:23.732780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A14E570>]}
+[0m11:02:23.795568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A03B6B0>]}
+[0m11:02:23.795568 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m11:02:23.811191 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 4 files added, 0 files changed.
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\schema.yml
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\example\my_first_dbt_model.sql
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\demo\customer.sql
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing: added file: fivetran1://models\example\my_second_dbt_model.sql
+[0m11:02:23.893600 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\customer.sql
+[0m11:02:24.025093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A53A690>]}
+[0m11:02:24.035625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A28EB70>]}
+[0m11:02:24.035625 [info ] [MainThread]: Found 3 models, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m11:02:24.035625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A49EC60>]}
+[0m11:02:24.037625 [info ] [MainThread]: 
+[0m11:02:24.037625 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:02:24.037625 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m11:02:24.049650 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m11:02:24.053496 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m11:02:24.053496 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:25.063761 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m11:02:25.063761 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m11:02:25.157686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c875b6e-d101-4bbe-bf78-821e7c81bceb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A96A1AE840>]}
+[0m11:02:25.158299 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:02:25.175181 [info ] [MainThread]: 
+[0m11:02:25.200973 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m11:02:25.200973 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m11:02:25.200973 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m11:02:25.205981 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m11:02:25.205981 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 11:02:25.200973 => 11:02:25.205981
+[0m11:02:25.205981 [debug] [Thread-2 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m11:02:25.214911 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m11:02:25.214911 [debug] [Thread-2 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m11:02:25.219489 [debug] [Thread-2 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m11:02:25.220694 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 11:02:25.214911 => 11:02:25.220694
+[0m11:02:25.221700 [debug] [Thread-2 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m11:02:25.222207 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 11:02:25.222207 => 11:02:25.222207
+[0m11:02:25.213886 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m11:02:25.222207 [debug] [Thread-2 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m11:02:25.222207 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 11:02:25.222207 => 11:02:25.222207
+[0m11:02:25.222207 [debug] [Thread-4 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m11:02:25.222207 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m11:02:25.226838 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m11:02:25.226838 [debug] [Thread-4 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m11:02:25.228781 [debug] [Thread-4 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m11:02:25.228781 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 11:02:25.228781 => 11:02:25.228781
+[0m11:02:25.228781 [debug] [Thread-4 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m11:02:25.228781 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 11:02:25.228781 => 11:02:25.228781
+[0m11:02:25.228781 [debug] [Thread-4 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m11:02:25.228781 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:02:25.237367 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m11:02:25.237367 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m11:02:25.237367 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m11:02:25.237367 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m11:02:25.237367 [debug] [MainThread]: Command end result
+[0m11:02:25.237367 [debug] [MainThread]: Command `dbt compile` succeeded at 11:02:25.237367 after 2.49 seconds
+[0m11:02:25.237367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A9510C9790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A95100AFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A950712570>]}
+[0m11:02:25.237367 [debug] [MainThread]: Flushing usage events
+[0m11:02:37.697666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341CA9FD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341CA9F6B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341CA9EE40>]}
+
+
+============================== 11:02:37.697666 | 3d66d431-326c-424e-a659-576edb0a9275 ==============================
+[0m11:02:37.697666 [info ] [MainThread]: Running with dbt=1.7.13
+[0m11:02:37.697666 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:38.482903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234359FB7A0>]}
+[0m11:02:38.562585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435464E30>]}
+[0m11:02:38.562585 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m11:02:38.562585 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m11:02:38.627031 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:02:38.627031 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:02:38.641040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234356C2F30>]}
+[0m11:02:38.646552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435B432C0>]}
+[0m11:02:38.646552 [info ] [MainThread]: Found 3 models, 0 sources, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m11:02:38.646552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000234358EB530>]}
+[0m11:02:38.657065 [info ] [MainThread]: 
+[0m11:02:38.657065 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:02:38.657065 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB'
+[0m11:02:38.657065 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB"
+[0m11:02:38.672701 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB"} */
+show terse schemas in database PC_FIVETRAN_DB
+    limit 10000
+[0m11:02:38.672701 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:39.320016 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.0 seconds
+[0m11:02:39.320016 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB: Close
+[0m11:02:39.407529 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m11:02:39.416848 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m11:02:39.416848 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m11:02:39.422198 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:40.079012 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m11:02:40.080783 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m11:02:40.158290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435654950>]}
+[0m11:02:40.161748 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:02:40.163001 [info ] [MainThread]: 
+[0m11:02:40.168716 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m11:02:40.168716 [debug] [Thread-2 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m11:02:40.168716 [info ] [Thread-1 (]: 1 of 3 START sql view model GOOGLE_SHEETS_DEMO.customer ........................ [RUN]
+[0m11:02:40.168716 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m11:02:40.168716 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m11:02:40.168716 [info ] [Thread-2 (]: 2 of 3 START sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ............. [RUN]
+[0m11:02:40.179292 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m11:02:40.182592 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m11:02:40.182592 [debug] [Thread-2 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m11:02:40.182592 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 11:02:40.168716 => 11:02:40.182592
+[0m11:02:40.182592 [debug] [Thread-2 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m11:02:40.182592 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m11:02:40.182592 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 11:02:40.182592 => 11:02:40.182592
+[0m11:02:40.205026 [debug] [Thread-1 (]: Writing runtime sql for node "model.fivetran1.customer"
+[0m11:02:40.221017 [debug] [Thread-2 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m11:02:40.238158 [debug] [Thread-2 (]: Writing runtime sql for node "model.fivetran1.my_first_dbt_model"
+[0m11:02:40.238158 [debug] [Thread-1 (]: Using snowflake connection "model.fivetran1.customer"
+[0m11:02:40.238158 [debug] [Thread-1 (]: On model.fivetran1.customer: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.customer"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.customer
+  
+   as (
+    WITH cte AS (
+    SELECT ROW_ID 
+    FROM "GOOGLE_SHEETS_DEMO"."ORDERS"
+)
+SELECT * 
+FROM "FINAL";
+[0m11:02:40.242142 [debug] [Thread-2 (]: Using snowflake connection "model.fivetran1.my_first_dbt_model"
+[0m11:02:40.242142 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:02:40.243870 [debug] [Thread-2 (]: On model.fivetran1.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_first_dbt_model"} */
+create or replace transient table PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m11:02:40.243870 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:02:40.830657 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01b3e60c-0000-a08e-0006-f56e00015312
+[0m11:02:40.830657 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 9 at position 12 unexpected ';'.
+[0m11:02:40.830657 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 11:02:40.182592 => 11:02:40.830657
+[0m11:02:40.830657 [debug] [Thread-1 (]: On model.fivetran1.customer: Close
+[0m11:02:40.921867 [debug] [Thread-1 (]: Database Error in model customer (models\demo\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 12 unexpected ';'.
+  compiled Code at target\run\fivetran1\models\demo\customer.sql
+[0m11:02:40.921867 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435D9BFB0>]}
+[0m11:02:40.921867 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model GOOGLE_SHEETS_DEMO.customer ............... [[31mERROR[0m in 0.75s]
+[0m11:02:40.921867 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m11:02:41.628129 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m11:02:41.660503 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 11:02:40.221017 => 11:02:41.660503
+[0m11:02:41.660503 [debug] [Thread-2 (]: On model.fivetran1.my_first_dbt_model: Close
+[0m11:02:41.754524 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435E24980>]}
+[0m11:02:41.754524 [info ] [Thread-2 (]: 2 of 3 OK created sql table model GOOGLE_SHEETS_DEMO.my_first_dbt_model ........ [[32mSUCCESS 1[0m in 1.58s]
+[0m11:02:41.754524 [debug] [Thread-2 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m11:02:41.754524 [debug] [Thread-4 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m11:02:41.754524 [info ] [Thread-4 (]: 3 of 3 START sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ............. [RUN]
+[0m11:02:41.770176 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m11:02:41.770176 [debug] [Thread-4 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m11:02:41.770176 [debug] [Thread-4 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m11:02:41.770176 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 11:02:41.770176 => 11:02:41.770176
+[0m11:02:41.770176 [debug] [Thread-4 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m11:02:41.770176 [debug] [Thread-4 (]: Writing runtime sql for node "model.fivetran1.my_second_dbt_model"
+[0m11:02:41.770176 [debug] [Thread-4 (]: Using snowflake connection "model.fivetran1.my_second_dbt_model"
+[0m11:02:41.770176 [debug] [Thread-4 (]: On model.fivetran1.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "node_id": "model.fivetran1.my_second_dbt_model"} */
+create or replace   view PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO.my_first_dbt_model
+where id = 1
+  );
+[0m11:02:41.785789 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:02:42.354008 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m11:02:42.369646 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 11:02:41.770176 => 11:02:42.369646
+[0m11:02:42.369646 [debug] [Thread-4 (]: On model.fivetran1.my_second_dbt_model: Close
+[0m11:02:42.453039 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d66d431-326c-424e-a659-576edb0a9275', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023435B4E4E0>]}
+[0m11:02:42.453039 [info ] [Thread-4 (]: 3 of 3 OK created sql view model GOOGLE_SHEETS_DEMO.my_second_dbt_model ........ [[32mSUCCESS 1[0m in 0.68s]
+[0m11:02:42.457749 [debug] [Thread-4 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m11:02:42.462026 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:02:42.462026 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB' was properly closed.
+[0m11:02:42.462026 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m11:02:42.464535 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m11:02:42.464535 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m11:02:42.464535 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m11:02:42.464535 [info ] [MainThread]: 
+[0m11:02:42.467343 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 3.81 seconds (3.81s).
+[0m11:02:42.468264 [debug] [MainThread]: Command end result
+[0m11:02:42.480273 [info ] [MainThread]: 
+[0m11:02:42.483506 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m11:02:42.484734 [info ] [MainThread]: 
+[0m11:02:42.485870 [error] [MainThread]:   Database Error in model customer (models\demo\customer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 9 at position 12 unexpected ';'.
+  compiled Code at target\run\fivetran1\models\demo\customer.sql
+[0m11:02:42.485870 [info ] [MainThread]: 
+[0m11:02:42.486873 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m11:02:42.488588 [debug] [MainThread]: Command `dbt run` failed at 11:02:42.488588 after 4.90 seconds
+[0m11:02:42.488588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341C9A9310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341C8FAFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002341C952F90>]}
+[0m11:02:42.493165 [debug] [MainThread]: Flushing usage events
+[0m12:15:22.117586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158B3C4FDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158AD908A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158B3C4EA50>]}
+
+
+============================== 12:15:22.121456 | b80b3c35-4063-4280-90c0-0dcd23398cbd ==============================
+[0m12:15:22.121456 [info ] [MainThread]: Running with dbt=1.7.13
+[0m12:15:22.125172 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:15:23.078523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b80b3c35-4063-4280-90c0-0dcd23398cbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158B3C4D400>]}
+[0m12:15:23.173148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b80b3c35-4063-4280-90c0-0dcd23398cbd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158CC4FBF20>]}
+[0m12:15:23.173148 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m12:15:23.193025 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m12:15:23.268233 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:15:23.268233 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m12:15:23.379772 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a node named 'GOOGLE_SHEETS_DEMO' which was not found
+[0m12:15:23.389062 [debug] [MainThread]: Command `dbt compile` failed at 12:15:23.389062 after 1.39 seconds
+[0m12:15:23.389062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158B2F82FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158CCC22300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000158CCC23710>]}
+[0m12:15:23.389062 [debug] [MainThread]: Flushing usage events
+[0m12:16:20.967246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184608AC470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184608ADB20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184608ADC70>]}
+
+
+============================== 12:16:20.970468 | b77dae32-4b0c-463a-a52c-a0b5bf5821b6 ==============================
+[0m12:16:20.970468 [info ] [MainThread]: Running with dbt=1.7.13
+[0m12:16:20.970468 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:16:21.838291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b77dae32-4b0c-463a-a52c-a0b5bf5821b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184795BAE10>]}
+[0m12:16:21.918339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b77dae32-4b0c-463a-a52c-a0b5bf5821b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018478ACC800>]}
+[0m12:16:21.918339 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m12:16:21.936983 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m12:16:22.012262 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:16:22.012262 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m12:16:22.123334 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a node named 'ORDERS' which was not found
+[0m12:16:22.136400 [debug] [MainThread]: Command `dbt compile` failed at 12:16:22.136400 after 1.28 seconds
+[0m12:16:22.136400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001845FD42FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018479A66B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018479769FD0>]}
+[0m12:16:22.137421 [debug] [MainThread]: Flushing usage events
+[0m20:32:10.753767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198B56F3BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198B56F3BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198B56F3050>]}
+
+
+============================== 20:32:10.756881 | 68ef17b8-b1f6-4995-9719-26acb38212cf ==============================
+[0m20:32:10.756881 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:32:10.756881 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:32:12.844922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '68ef17b8-b1f6-4995-9719-26acb38212cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198CC2532F0>]}
+[0m20:32:12.954570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '68ef17b8-b1f6-4995-9719-26acb38212cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198B54D8860>]}
+[0m20:32:12.954570 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m20:32:12.977842 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m20:32:13.111659 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m20:32:13.111659 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\schema.yml
+[0m20:32:13.127282 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m20:32:13.331398 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'Varun_Demo' in the 'models' section of file 'models\demo\schema.yml'
+[0m20:32:13.488234 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a source named 'Fivetran1.ORDERS' which was not found
+[0m20:32:13.503937 [debug] [MainThread]: Command `dbt compile` failed at 20:32:13.503937 after 3.07 seconds
+[0m20:32:13.503937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198B56F2810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198CEA5EF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198CE926C30>]}
+[0m20:32:13.503937 [debug] [MainThread]: Flushing usage events
+[0m20:38:39.072798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281696261B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281696EDF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281696EE060>]}
+
+
+============================== 20:38:39.072798 | 20949b37-0f93-435f-9e72-202930b9a101 ==============================
+[0m20:38:39.072798 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:38:39.088391 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m20:38:40.247980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20949b37-0f93-435f-9e72-202930b9a101', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002810267F710>]}
+[0m20:38:40.357626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20949b37-0f93-435f-9e72-202930b9a101', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281026C2AB0>]}
+[0m20:38:40.357626 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m20:38:40.388881 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m20:38:40.482930 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m20:38:40.482930 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\schema.yml
+[0m20:38:40.482930 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m20:38:40.686521 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'Varun_Demo' in the 'models' section of file 'models\demo\schema.yml'
+[0m20:38:40.811814 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a source named 'Fivetran1.ORDERS' which was not found
+[0m20:38:40.843234 [debug] [MainThread]: Command `dbt compile` failed at 20:38:40.843234 after 2.10 seconds
+[0m20:38:40.843234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281695741A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028102A13170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028102A13140>]}
+[0m20:38:40.843234 [debug] [MainThread]: Flushing usage events
+[0m20:43:21.670893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1FC76CDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1FC76E840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1FC76E7E0>]}
+
+
+============================== 20:43:21.686484 | 554a4a15-796e-432f-9472-6087403745a4 ==============================
+[0m20:43:21.686484 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:43:21.686484 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt compile', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:43:22.904552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '554a4a15-796e-432f-9472-6087403745a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1FC76F110>]}
+[0m20:43:23.018817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '554a4a15-796e-432f-9472-6087403745a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A194176030>]}
+[0m20:43:23.018817 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m20:43:23.081468 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m20:43:23.222921 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m20:43:23.222921 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\schema.yml
+[0m20:43:23.222921 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m20:43:23.458446 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'Varun_Demo' in the 'models' section of file 'models\demo\schema.yml'
+[0m20:43:23.567964 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a source named 'Fivetran1.ORDERS' which was not found
+[0m20:43:23.662014 [debug] [MainThread]: Command `dbt compile` failed at 20:43:23.662014 after 2.34 seconds
+[0m20:43:23.662014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1FC48D340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A1940BBFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A196616FF0>]}
+[0m20:43:23.662014 [debug] [MainThread]: Flushing usage events
+[0m20:58:34.806692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F68E03380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F68E025D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F68E01490>]}
+
+
+============================== 20:58:34.806692 | 3df2ac8e-d077-40cf-9109-0c4c25343e6c ==============================
+[0m20:58:34.806692 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:58:34.806692 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m20:58:36.107048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3df2ac8e-d077-40cf-9109-0c4c25343e6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F682ED340>]}
+[0m20:58:36.232307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3df2ac8e-d077-40cf-9109-0c4c25343e6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F00129F70>]}
+[0m20:58:36.232307 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m20:58:36.295133 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m20:58:36.404751 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m20:58:36.404751 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\schema.yml
+[0m20:58:36.404751 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m20:58:36.655276 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'Varun_Demo' in the 'models' section of file 'models\demo\schema.yml'
+[0m20:58:36.827107 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.fivetran1.customer' (models\demo\customer.sql) depends on a source named 'Fivetran1.ORDERS' which was not found
+[0m20:58:36.842739 [debug] [MainThread]: Command `dbt compile` failed at 20:58:36.842739 after 2.35 seconds
+[0m20:58:36.842739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F68ACAFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F027132F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019F027132C0>]}
+[0m20:58:36.842739 [debug] [MainThread]: Flushing usage events
+[0m21:00:46.028574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED736DC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED736E540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED736FD10>]}
+
+
+============================== 21:00:46.028574 | 398ceaf5-5da5-4be6-bc12-72bd416ab7df ==============================
+[0m21:00:46.028574 [info ] [MainThread]: Running with dbt=1.7.13
+[0m21:00:46.044198 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:00:47.234949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EF010E690>]}
+[0m21:00:47.360277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EF0354F20>]}
+[0m21:00:47.375901 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m21:00:47.423102 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m21:00:47.517121 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m21:00:47.532752 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\schema.yml
+[0m21:00:47.532752 [debug] [MainThread]: Partial parsing: updated file: fivetran1://models\demo\customer.sql
+[0m21:00:47.786991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EF056DC10>]}
+[0m21:00:47.799130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EF0412900>]}
+[0m21:00:47.799130 [info ] [MainThread]: Found 3 models, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m21:00:47.846159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EEF57CB60>]}
+[0m21:00:47.846159 [info ] [MainThread]: 
+[0m21:00:47.861780 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:00:47.861780 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m21:00:47.893192 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m21:00:47.893192 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m21:00:47.893192 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:00:49.553599 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m21:00:49.553599 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m21:00:49.647665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '398ceaf5-5da5-4be6-bc12-72bd416ab7df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018EEE0B9130>]}
+[0m21:00:49.647665 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m21:00:49.663298 [info ] [MainThread]: 
+[0m21:00:49.726110 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m21:00:49.726110 [debug] [Thread-2 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m21:00:49.726110 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m21:00:49.726110 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m21:00:49.726110 [debug] [Thread-2 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m21:00:49.726110 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m21:00:49.741731 [debug] [Thread-2 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m21:00:49.741731 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m21:00:49.757361 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 21:00:49.726110 => 21:00:49.741731
+[0m21:00:49.757361 [debug] [Thread-2 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m21:00:49.757361 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 21:00:49.741731 => 21:00:49.757361
+[0m21:00:49.757361 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 21:00:49.757361 => 21:00:49.757361
+[0m21:00:49.757361 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m21:00:49.757361 [debug] [Thread-2 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m21:00:49.757361 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 21:00:49.757361 => 21:00:49.757361
+[0m21:00:49.757361 [debug] [Thread-4 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m21:00:49.757361 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m21:00:49.757361 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m21:00:49.757361 [debug] [Thread-4 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m21:00:49.772980 [debug] [Thread-4 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m21:00:49.772980 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 21:00:49.757361 => 21:00:49.772980
+[0m21:00:49.772980 [debug] [Thread-4 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m21:00:49.772980 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 21:00:49.772980 => 21:00:49.772980
+[0m21:00:49.772980 [debug] [Thread-4 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m21:00:49.772980 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:00:49.772980 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m21:00:49.772980 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m21:00:49.772980 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m21:00:49.772980 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m21:00:49.772980 [debug] [MainThread]: Command end result
+[0m21:00:49.789738 [debug] [MainThread]: Command `dbt compile` succeeded at 21:00:49.789738 after 4.33 seconds
+[0m21:00:49.789738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED0D644D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED736DC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018ED736DC40>]}
+[0m21:00:49.789738 [debug] [MainThread]: Flushing usage events
+[0m21:09:05.185615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6F8FC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6F8F740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6F8F170>]}
+
+
+============================== 21:09:05.185615 | ce1b0f2a-dba0-48f2-b8a1-9050f4065855 ==============================
+[0m21:09:05.185615 [info ] [MainThread]: Running with dbt=1.7.13
+[0m21:09:05.185615 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m21:09:06.316903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014ADF8431A0>]}
+[0m21:09:06.426479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014ADF843BC0>]}
+[0m21:09:06.426479 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m21:09:06.489491 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m21:09:06.583793 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:09:06.583793 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:09:06.583793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014ADF86AF60>]}
+[0m21:09:06.599494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AE0042840>]}
+[0m21:09:06.599494 [info ] [MainThread]: Found 3 models, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m21:09:06.599494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6FF41D0>]}
+[0m21:09:06.615125 [info ] [MainThread]: 
+[0m21:09:06.615125 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:09:06.615125 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m21:09:06.630728 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m21:09:06.646364 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m21:09:06.646364 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:09:07.577060 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m21:09:07.577060 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m21:09:09.922081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ce1b0f2a-dba0-48f2-b8a1-9050f4065855', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014ADFDBE840>]}
+[0m21:09:09.922081 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m21:09:09.922081 [info ] [MainThread]: 
+[0m21:09:10.001722 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m21:09:10.001722 [debug] [Thread-2 (]: Began running node model.fivetran1.my_first_dbt_model
+[0m21:09:10.001722 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m21:09:10.001722 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.fivetran1.my_first_dbt_model'
+[0m21:09:10.001722 [debug] [Thread-2 (]: Began compiling node model.fivetran1.my_first_dbt_model
+[0m21:09:10.001722 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m21:09:10.017405 [debug] [Thread-2 (]: Writing injected SQL for node "model.fivetran1.my_first_dbt_model"
+[0m21:09:10.033107 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m21:09:10.033107 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 21:09:10.017405 => 21:09:10.033107
+[0m21:09:10.033107 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m21:09:10.033107 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 21:09:10.033107 => 21:09:10.033107
+[0m21:09:10.033107 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m21:09:10.033107 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (compile): 21:09:10.017405 => 21:09:10.033107
+[0m21:09:10.033107 [debug] [Thread-2 (]: Began executing node model.fivetran1.my_first_dbt_model
+[0m21:09:10.033107 [debug] [Thread-2 (]: Timing info for model.fivetran1.my_first_dbt_model (execute): 21:09:10.033107 => 21:09:10.033107
+[0m21:09:10.033107 [debug] [Thread-2 (]: Finished running node model.fivetran1.my_first_dbt_model
+[0m21:09:10.033107 [debug] [Thread-4 (]: Began running node model.fivetran1.my_second_dbt_model
+[0m21:09:10.033107 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.fivetran1.my_second_dbt_model'
+[0m21:09:10.048656 [debug] [Thread-4 (]: Began compiling node model.fivetran1.my_second_dbt_model
+[0m21:09:10.048656 [debug] [Thread-4 (]: Writing injected SQL for node "model.fivetran1.my_second_dbt_model"
+[0m21:09:10.048656 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (compile): 21:09:10.048656 => 21:09:10.048656
+[0m21:09:10.048656 [debug] [Thread-4 (]: Began executing node model.fivetran1.my_second_dbt_model
+[0m21:09:10.048656 [debug] [Thread-4 (]: Timing info for model.fivetran1.my_second_dbt_model (execute): 21:09:10.048656 => 21:09:10.048656
+[0m21:09:10.048656 [debug] [Thread-4 (]: Finished running node model.fivetran1.my_second_dbt_model
+[0m21:09:10.048656 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:09:10.048656 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m21:09:10.064289 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m21:09:10.064289 [debug] [MainThread]: Connection 'model.fivetran1.my_first_dbt_model' was properly closed.
+[0m21:09:10.064289 [debug] [MainThread]: Connection 'model.fivetran1.my_second_dbt_model' was properly closed.
+[0m21:09:10.064289 [debug] [MainThread]: Command end result
+[0m21:09:10.064289 [debug] [MainThread]: Command `dbt compile` succeeded at 21:09:10.064289 after 5.09 seconds
+[0m21:09:10.079909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6D76900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6E154F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014AC6E14680>]}
+[0m21:09:10.079909 [debug] [MainThread]: Flushing usage events
+[0m21:18:29.597554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8DE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8DD60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8DC40>]}
+
+
+============================== 21:18:29.613206 | f05e5f67-ad6d-4629-9126-a95a721c7396 ==============================
+[0m21:18:29.613206 [info ] [MainThread]: Running with dbt=1.7.13
+[0m21:18:29.613206 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt compile', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:18:30.741825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022859C64650>]}
+[0m21:18:30.851498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285919B8C0>]}
+[0m21:18:30.851498 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m21:18:30.867264 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m21:18:30.945534 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 0 files added, 0 files changed.
+[0m21:18:30.945534 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\my_second_dbt_model.sql
+[0m21:18:30.961309 [debug] [MainThread]: Partial parsing: deleted file: fivetran1://models\example\my_first_dbt_model.sql
+[0m21:18:30.961309 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.fivetran1.example
+[0m21:18:30.976923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022859DDAFC0>]}
+[0m21:18:30.976923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285A032CC0>]}
+[0m21:18:30.976923 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m21:18:31.008177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002285946B710>]}
+[0m21:18:31.008177 [info ] [MainThread]: 
+[0m21:18:31.008177 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:18:31.008177 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m21:18:31.039430 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m21:18:31.039430 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m21:18:31.039430 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:18:33.560306 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 3.0 seconds
+[0m21:18:33.575941 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m21:18:33.779902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f05e5f67-ad6d-4629-9126-a95a721c7396', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840FB9130>]}
+[0m21:18:33.779902 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m21:18:33.795511 [info ] [MainThread]: 
+[0m21:18:33.795511 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m21:18:33.795511 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m21:18:33.795511 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m21:18:33.811128 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m21:18:33.811128 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 21:18:33.795511 => 21:18:33.811128
+[0m21:18:33.811128 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m21:18:33.811128 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 21:18:33.811128 => 21:18:33.811128
+[0m21:18:33.811128 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m21:18:33.826748 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:18:33.826748 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m21:18:33.826748 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m21:18:33.826748 [debug] [MainThread]: Command end result
+[0m21:18:33.845017 [debug] [MainThread]: Command `dbt compile` succeeded at 21:18:33.845017 after 4.43 seconds
+[0m21:18:33.845017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8DC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8DC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022840F8FF20>]}
+[0m21:18:33.845017 [debug] [MainThread]: Flushing usage events
+[0m21:20:21.482523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BF8C62A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BFA3F920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BFA3E8D0>]}
+
+
+============================== 21:20:21.493574 | ba3f78db-e1bf-407b-978b-4c2b5d046117 ==============================
+[0m21:20:21.493574 [info ] [MainThread]: Running with dbt=1.7.13
+[0m21:20:21.493574 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:20:22.629100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BFA3CD70>]}
+[0m21:20:22.738896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D8624EF0>]}
+[0m21:20:22.738896 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m21:20:22.787173 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m21:20:22.803957 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m21:20:22.817467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D8B914C0>]}
+[0m21:20:23.900679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D8B905C0>]}
+[0m21:20:23.900679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D8AB54F0>]}
+[0m21:20:23.900679 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m21:20:23.949984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D88B1580>]}
+[0m21:20:23.955064 [info ] [MainThread]: 
+[0m21:20:23.957730 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:20:23.960879 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO'
+[0m21:20:23.979421 [debug] [ThreadPool]: Using snowflake connection "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"
+[0m21:20:23.979421 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "fivetran1", "target_name": "dev", "connection_name": "list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO"} */
+show terse objects in PC_FIVETRAN_DB.GOOGLE_SHEETS_DEMO limit 10000
+[0m21:20:23.979421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:20:26.007513 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.0 seconds
+[0m21:20:26.007513 [debug] [ThreadPool]: On list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO: Close
+[0m21:20:26.227813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ba3f78db-e1bf-407b-978b-4c2b5d046117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5D8BA5130>]}
+[0m21:20:26.227813 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m21:20:26.227813 [info ] [MainThread]: 
+[0m21:20:26.243353 [debug] [Thread-1 (]: Began running node model.fivetran1.customer
+[0m21:20:26.243353 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.fivetran1.customer'
+[0m21:20:26.258987 [debug] [Thread-1 (]: Began compiling node model.fivetran1.customer
+[0m21:20:26.258987 [debug] [Thread-1 (]: Writing injected SQL for node "model.fivetran1.customer"
+[0m21:20:26.274508 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (compile): 21:20:26.258987 => 21:20:26.274508
+[0m21:20:26.274508 [debug] [Thread-1 (]: Began executing node model.fivetran1.customer
+[0m21:20:26.274508 [debug] [Thread-1 (]: Timing info for model.fivetran1.customer (execute): 21:20:26.274508 => 21:20:26.274508
+[0m21:20:26.274508 [debug] [Thread-1 (]: Finished running node model.fivetran1.customer
+[0m21:20:26.274508 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:20:26.274508 [debug] [MainThread]: Connection 'list_PC_FIVETRAN_DB_GOOGLE_SHEETS_DEMO' was properly closed.
+[0m21:20:26.274508 [debug] [MainThread]: Connection 'model.fivetran1.customer' was properly closed.
+[0m21:20:26.274508 [debug] [MainThread]: Command end result
+[0m21:20:26.290134 [debug] [MainThread]: Command `dbt compile` succeeded at 21:20:26.290134 after 5.00 seconds
+[0m21:20:26.290134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BFA3E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BFA3E720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D5BF8C62A0>]}
+[0m21:20:26.290134 [debug] [MainThread]: Flushing usage events
+[0m21:21:08.955312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1637CB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1637C980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB1637C770>]}
+
+
+============================== 21:21:08.965924 | 1e7166d8-33bf-44d0-a442-a2d74cf461b0 ==============================
+[0m21:21:08.965924 [info ] [MainThread]: Running with dbt=1.7.13
+[0m21:21:08.965924 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Varun\\Desktop\\demo_repo\\dbt-Project\\fivetran1\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Varun\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt parse', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:10.209017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1e7166d8-33bf-44d0-a442-a2d74cf461b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2EC9B3B0>]}
+[0m21:21:10.318834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1e7166d8-33bf-44d0-a442-a2d74cf461b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB162803B0>]}
+[0m21:21:10.318834 [info ] [MainThread]: Registered adapter: snowflake=1.7.3
+[0m21:21:10.334463 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m21:21:10.428653 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:21:10.428653 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:21:10.428653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1e7166d8-33bf-44d0-a442-a2d74cf461b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2F352120>]}
+[0m21:21:10.428653 [info ] [MainThread]: Performance info: C:\Users\Varun\Desktop\demo_repo\dbt-Project\fivetran1\target\perf_info.json
+[0m21:21:10.444281 [debug] [MainThread]: Command `dbt parse` succeeded at 21:21:10.444281 after 1.78 seconds
+[0m21:21:10.444281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB162B6330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB16233800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB163A7CE0>]}
+[0m21:21:10.444281 [debug] [MainThread]: Flushing usage events

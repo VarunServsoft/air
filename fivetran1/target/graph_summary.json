@@ -1,0 +1,1 @@
+{"_invocation_id": "ba3f78db-e1bf-407b-978b-4c2b5d046117", "linked": {"0": {"name": "source.fivetran1.Fivetran1.ORDERS", "type": "source", "succ": [1]}, "1": {"name": "model.fivetran1.customer", "type": "model"}}}

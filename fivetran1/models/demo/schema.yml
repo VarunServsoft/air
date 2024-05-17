@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: Fivetran1
+    description: "A starter dbt model"
+    database: PC_FIVETRAN_DB
+    schema: GOOGLE_SHEETS_DEMO
+    tables:
+      - name: ORDERS
